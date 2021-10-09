@@ -17,6 +17,7 @@ import GeneralInfo from '../GeneralInfo/GeneralInfo';
 import InfoDialog from '../InfoDialog/InfoDialog';
 import CircularProgress from '@mui/material/CircularProgress';
 import SettingsDialog from '../SettingsDialog/SettingsDialog';
+import MenuIcon from '@mui/icons-material/Menu';
 import DayData from '../DayData/DayData';
 import { useStyles } from './MainPanel.styles';
 import { getMyIpLocation, getWeatherData } from '../../common/requests';
@@ -35,6 +36,7 @@ const MainPanel = () => {
   const [dialogProps, setDialogProps] = useState(dialogPrototype);
   const [settings, setSettings] = useState(sets);
   const [settingsDialog, setSettingsDialog] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     getWeatherData(town).then(result => {
@@ -112,7 +114,18 @@ const MainPanel = () => {
             }
           />
         </FormControl>
-        <div className={isBrowser ? styles.buttonsBar : styles.mobileMenu}>
+        {
+          isBrowser
+          ? null
+          : <div className={styles.menuIcon}>
+              <IconButton size='small' onClick={() => setShowMenu(!showMenu)}>
+                <MenuIcon color='primary'/>
+              </IconButton>
+            </div>
+        }
+        
+
+        <div className={isBrowser ? styles.buttonsBar : styles.mobileMenu} style={{display: isBrowser ? null : showMenu ? 'flex' : 'none'}}>
           {
             weatherData
             ? renderFavButton(weatherData.location.name, weatherData.location.country)

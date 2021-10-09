@@ -1,4 +1,4 @@
-import React, {forwardRef} from "react";
+import React, {forwardRef} from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -10,7 +10,7 @@ import { dialogPrototype } from '../../common/const';
 
 
 const Transition = forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Slide direction='up' ref={ref} {...props} />;
 });
 
 const InfoDialog = ({text, closeFunc}) => {

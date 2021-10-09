@@ -1,5 +1,5 @@
-import React from "react";
-import { useStyles } from "./GeneralInfo.styles";
+import React from 'react';
+import { useStyles } from './GeneralInfo.styles';
 
 const GeneralInfo = ({weatherData, settings}) => {
   const styles = useStyles();

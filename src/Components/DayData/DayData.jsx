@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
-import { useStyles } from "./DayData.styles";
+import { useStyles } from './DayData.styles';
 import { isBrowser } from 'react-device-detect';
 
 
@@ -9,7 +9,7 @@ const DayData = ({data, settings}) => {
   const styles = useStyles();
 
   const singleDay = () => {
-    const day = new Date (data.date).toLocaleDateString('en-US', {weekday: "short", day: "2-digit"});
+    const day = new Date (data.date).toLocaleDateString('en-US', {weekday: 'short', day: '2-digit'});
     let temps = `${parseInt(data.day.mintemp_c)}° ${parseInt(data.day.maxtemp_c)}°`
 
     if (settings.tempUnit === 'F') {

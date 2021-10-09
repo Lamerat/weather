@@ -1,5 +1,4 @@
 import { makeStyles } from '@mui/styles';
-// import { isBrowser } from 'react-device-detect';
 
 
 export const useStyles = makeStyles(theme => ({
@@ -13,4 +12,9 @@ export const useStyles = makeStyles(theme => ({
   buttons: {
     margin: '10px 12px 10px 12px'
   },
+
+  textStyle: {
+    paddingTop: 2
+  }
+  
 }));

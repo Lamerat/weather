@@ -49,19 +49,21 @@ const SettingsDialog = ({data, setData, saveFunc, closeFunc}) => {
       <DialogTitle>Settings</DialogTitle>
         <div className={styles.mainHolder}>
           <HomeIcon sx={{ m: 1}} color='secondary'/>
-          Home
+          <div className={styles.textStyle}>Home</div>
           <TextField
             sx={{ m: 1, minWidth: 50, }}
             variant='outlined'
+            color='secondary'
             size='small'
             value={values.settings.home}
             onChange={(e) => changeValue('home', e.target.value)}
           />
           <ThermostatIcon sx={{ m: 1}} color='secondary'/>
-          Temperature
+          <div className={styles.textStyle}>Temperature</div>
           <FormControl sx={{ m: 1, minWidth: 50 }}>
             <Select
               size='small'
+              color='secondary'
               value={values.settings.tempUnit}
               onChange={(e) => changeValue('tempUnit', e.target.value)}
             >
@@ -70,10 +72,11 @@ const SettingsDialog = ({data, setData, saveFunc, closeFunc}) => {
             </Select>
           </FormControl>
           <SpeedIcon sx={{ m: 1}} color='secondary'/>
-          Speed/Range
+          <div className={styles.textStyle}>Speed/Range</div>
           <FormControl sx={{ m: 1, minWidth: 50 }}>
             <Select
               size='small'
+              color='secondary'
               value={values.settings.rangeUnit}
               onChange={(e) => changeValue('rangeUnit', e.target.value)}
             >
@@ -82,10 +85,11 @@ const SettingsDialog = ({data, setData, saveFunc, closeFunc}) => {
             </Select>
           </FormControl>
           <CompressIcon sx={{ m: 1}} color='secondary'/>
-          Pressure
+          <div className={styles.textStyle}>Pressure</div>
           <FormControl sx={{ m: 1, minWidth: 50 }}>
             <Select
               size='small'
+              color='secondary'
               value={values.settings.pressureUnit}
               onChange={(e) => changeValue('pressureUnit', e.target.value)}
             >

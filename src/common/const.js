@@ -1,8 +1,10 @@
-export const API_URL_WEATHER = 'http://api.weatherapi.com/v1/forecast.json';
+export const API_URL_WEATHER = 'https://api.weatherapi.com/v1/forecast.json';
 
 export const WEATHER_KEY = '0efcd722ee444b57849103704210710';
 
 export const WEATHER_LANG = 'en';
+
+export const API_URL_GEOLOCATION = 'https://api.db-ip.com/v2/free/self';
 
 export const dialogPrototype = {
   show: false,

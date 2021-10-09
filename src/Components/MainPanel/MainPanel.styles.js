@@ -24,14 +24,20 @@ export const useStyles = makeStyles(theme => ({
   },
 
   searchField: {
+    width: isBrowser ? 300 : 280,    
     backgroundColor: 'rgb(255 255 255 / 20%)',
+
     '& .MuiInputBase-input': {
       color: 'white',
     },
+
     '& .MuiOutlinedInput-notchedOutline': {
       borderColor: 'rgb(255 255 255 / 50%)',
     },
-    width: 300,
+
+    '&:hover fieldset.MuiOutlinedInput-notchedOutline': {
+      borderColor: 'rgb(255 255 255 / 70%)',
+    }
   },
 
   favoritesBar: {
@@ -44,7 +50,8 @@ export const useStyles = makeStyles(theme => ({
 
   selectStyle: {
     backgroundColor: 'rgb(255 255 255 / 20%)',
-    width: 300,
+    width: isBrowser ? 300 : 280,
+
     '& .MuiSvgIcon-root': {
       color: 'white',
     },
@@ -55,6 +62,10 @@ export const useStyles = makeStyles(theme => ({
     '& .MuiOutlinedInput-notchedOutline': {
       borderColor: 'rgb(255 255 255 / 50%)',
     },
+
+    '&:hover fieldset.MuiOutlinedInput-notchedOutline': {
+      borderColor: 'rgb(255 255 255 / 70%)',
+    }
   },
 
   progressDiv: {
@@ -68,11 +79,16 @@ export const useStyles = makeStyles(theme => ({
     gridTemplateColumns: '25% 25% 25% 25%',
   },
 
+  menuIcon: {
+    backgroundColor: 'rgb(255 255 255 / 20%)',
+  },
+
   mobileMenu: {
-    position: 'fixed',
-    top: 15,
-    right: 15,
+    position: 'absolute',
+    top: 48,
+    right: 11,
     display: 'flex',
     flexDirection: 'column',
+    backgroundColor: 'rgb(255 255 255 / 20%)',
   }
 }));
