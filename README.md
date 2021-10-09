@@ -7,7 +7,7 @@ Simple weather information panel.
 The free version of api.weatherapi.com return data only for max __3__ days and for that the information in bottom boxes is repeated.
 
 ## API
-api.weatherapi.com
+api.weatherapi.com <br/>
 api.db-ip.com
 
 ## Used libraries
